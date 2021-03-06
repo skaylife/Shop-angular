@@ -6,7 +6,8 @@
 
 В следующем примере показано, как установить enable Ivy параметр false, чтобы отказаться от Ivy.
 
-`tsconfig.app.json
+`
+tsconfig.app.json
 content_copy
 {
   "extends": "./tsconfig.json",
@@ -24,7 +25,8 @@ content_copy
   "angularCompilerOptions": {
     "enableIvy": false
   }
-}`
+}
+`
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
