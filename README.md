@@ -27,6 +27,9 @@ content_copy
   }
 }
 `
+Ссылка с проблемой 
+https://i.imgur.com/RXuH6mF.png
+https://angular.io/guide/ivy
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
