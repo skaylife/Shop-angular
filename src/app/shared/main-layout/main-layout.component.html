@@ -1,0 +1,19 @@
+<nav class="navbar bg-dark">
+  <h2>Shop Ru</h2>
+
+  <ul>
+    <li routerLinkActive="active">
+      <a href="#">Телефоны</a>
+    </li>
+    <li routerLinkActive="active">
+      <a href="#">Планшеты</a>
+    </li>
+    <li routerLinkActive="active">
+      <a href="#">Компьютеры</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/cart']">Cart</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
