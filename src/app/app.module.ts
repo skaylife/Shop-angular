@@ -10,6 +10,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { QuillModule } from 'ngx-quill';
 import { AuthInterceptor } from './shared/auth.interseptor';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AuthInterceptor } from './shared/auth.interseptor';
     MainPageComponent,
     ProductPageComponent,
     CartPageComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
