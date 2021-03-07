@@ -14,7 +14,7 @@
       <a [routerLink]="['/admin', 'orders']">Заказы</a>
     </li>
     <li routerLinkActive="active">
-      <a [routerLink]="['/admin', '']">Выход</a>
+      <a href="#" (click)="logout($event)">Выход</a>
     </li>
     <li routerLinkActive="active">
       <a [routerLink]="['/admin', 'login']">Вход</a>
