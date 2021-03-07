@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from '../shared/auth.guard';
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AuthGuard } from '../shared/auth.guard';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    QuillModule.forRoot(),
     RouterModule.forChild([
       {
         path: '',
