@@ -43,7 +43,7 @@ export class AuthService {
     this.setToken(null);
   }
 
-  isAuth() {
+  isAuthenticated() {
     return !!this.token; //Если токен null, то происходит конверт null в - False | True = True/ Если False значит user не авторизован
   }
 }
