@@ -8,8 +8,10 @@
       *ngIf="form.get('email').touched && form.get('email').invalid"
       class="validation"
     >
-      <small *ngIf="form.get('email').errors.required">Введите Email</small>
-      <small *ngIf="form.get('email').errors.email">Введите valid Email</small>
+      <small *ngIf="form.get('email').errors.required">Введите Email 🥱</small>
+      <small *ngIf="form.get('email').errors.email"
+        >Введите valid Email 🥺</small
+      >
     </div>
   </div>
 
@@ -22,10 +24,10 @@
     >
       <small *ngIf="form.get('password').errors.required">Введите Пароль</small>
       <small *ngIf="form.get('password').errors.minlength"
-        >Введите Пароль больше 6 символов
+        >Введите Пароль больше 6 символов 😥
         {{ form.get("password").errors.minLength.requiredLenght }}
-        сейчас Пароль в
-        {{ form.get("password").errors.minLength.actulLength }}
+        сейчас Пароль в 😓
+        {{ form.get("password").errors.minlength.actualLength }}
       </small>
     </div>
   </div>
@@ -33,7 +35,7 @@
   <button
     type="submit"
     class="btn btn-primary btn-block"
-    [disabled]="form.inalid || submited"
+    [disabled]="form.invalid || submitted"
   >
     Войти
   </button>
