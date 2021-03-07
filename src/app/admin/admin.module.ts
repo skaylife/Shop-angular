@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthGuard } from '../shared/auth.guard';
 
 @NgModule({
   declarations: [
@@ -30,10 +31,26 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         children: [
           { path: '', redirectTo: '/admin/login', pathMatch: 'full' },
           { path: 'login', component: LoginPageComponent },
-          { path: 'dashboard', component: DashboardPageComponent },
-          { path: 'add', component: AddPageComponent },
-          { path: 'product/:id/edit', component: EditPageComponent },
-          { path: 'orders', component: OrdersPageComponent },
+          {
+            path: 'dashboard',
+            component: DashboardPageComponent,
+            canActivate: [AuthGuard],
+          },
+          {
+            path: 'add',
+            component: AddPageComponent,
+            canActivate: [AuthGuard],
+          },
+          {
+            path: 'product/:id/edit',
+            component: EditPageComponent,
+            canActivate: [AuthGuard],
+          },
+          {
+            path: 'orders',
+            component: OrdersPageComponent,
+            canActivate: [AuthGuard],
+          },
         ],
       },
     ]),
