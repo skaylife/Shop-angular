@@ -1,0 +1,26 @@
+.product {
+  margin: 4rem ;
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.8rem auto;
+  }
+
+  .right {
+
+  }
+
+  h2 {
+    margin-bottom: .5rem;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.item {
+  width: 50%;
+}
