@@ -1,1 +1,35 @@
-<p>dashboard-page works!</p>
+<div *ngIf="products.length; else loading">
+  <h2 class="pb text-center">Список продуктов</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th  class="tr-color">ID</th>
+        <th  class="tr-color">Название</th>
+        <th  class="tr-color">Цена</th>
+        <th  class="tr-color">Дата создания товара</th>
+        <th  class="tr-color">Открыть</th>
+        <th  class="tr-color">Удалить</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr  *ngFor="let product of products; let idx = index">
+        <td>{{ idx + 1 }}</td>
+        <td>{{ product.title }}</td>
+        <td>{{ product.price }}$</td>
+        <td>{{ product.date }}</td>
+        <td>
+          <button class="btn btn-dark" [routerLink]="['/admin','product','product.id','edit']">Открыть</button>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="remove(product.id)">Удалить</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #loading>
+  <p class="text-center">Загрузка...</p>
+</ng-template>

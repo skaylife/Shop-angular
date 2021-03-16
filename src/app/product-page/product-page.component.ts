@@ -8,6 +8,8 @@ import { switchMap } from 'rxjs/operators';
   templateUrl: './product-page.component.html',
   styleUrls: ['./product-page.component.scss']
 })
+
+
 export class ProductPageComponent implements OnInit {
 
   product$
@@ -23,5 +25,6 @@ export class ProductPageComponent implements OnInit {
       return this.productServ.getById(params['id'])
     }))
   }
+  
 
 }
