@@ -10,6 +10,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from '../shared/auth.guard';
 import { QuillModule } from 'ngx-quill';
+import { SearchPipe } from '../shared/search.pipe';
+
+
 
 @NgModule({
   declarations: [
@@ -19,6 +22,7 @@ import { QuillModule } from 'ngx-quill';
     AddPageComponent,
     EditPageComponent,
     OrdersPageComponent,
+    SearchPipe
   ],
 
   imports: [

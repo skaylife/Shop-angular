@@ -20,6 +20,7 @@ import { ProductComponent } from './product/product.component';
     ProductPageComponent,
     CartPageComponent,
     ProductComponent,
+
   ],
   imports: [
     BrowserModule,
