@@ -3,16 +3,16 @@
 
   <ul>
     <li routerLinkActive="active">
-      <a href="#">Телефоны</a>
+      <a (click)="setType('Phone')">Телефоны</a>
     </li>
     <li routerLinkActive="active">
-      <a href="#">Планшеты</a>
+      <a (click)="setType('Tablet')">Планшеты</a>
     </li>
     <li routerLinkActive="active">
-      <a href="#">Компьтеры</a>
+      <a (click)="setType('Laptop')">Компьтеры</a>
     </li>
     <li routerLinkActive="active">
-      <a [routerLink]="['/cart']">Корзина</a>
+      <a (click)="setType('Cart')" [routerLink]="['/cart']">Корзина</a>
     </li>
   </ul>
 </nav>
