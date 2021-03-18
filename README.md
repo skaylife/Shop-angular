@@ -10,7 +10,14 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Deploy FireBase
+
+` npm install @angular/cli ` 
+` ng build --prod `
+` npm install -g firebase-tools `
+` firebase login `
+` firebase init `
+` firebase deploy `
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
