@@ -11,7 +11,7 @@
     Открыть
   </button>
 
-  <button [routerLink]="['/cart']" class="btn btn-dark">
+  <button [routerLink]="['/cart']" class="btn btn-dark" (click)="addProduct(product)">
     Добавить корзину
   </button>
 </div>

@@ -1,3 +1,4 @@
+import { ProductService } from 'src/app/shared/product.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartPageComponent implements OnInit {
 
-  constructor() { }
+  cartProducts = []
+  totalPrice = 0
+
+  constructor(
+    private productServ : ProductService
+  ) { }
 
   ngOnInit() {
+    this.cartProducts = this.productServ.cartProduct
+    for (let i = 0; i < this.cartProducts.length; i++) {
+      this.totalPrice += +this.cartProducts[i].price
+      
+    }
   }
 
 }

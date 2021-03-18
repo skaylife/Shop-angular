@@ -1,1 +1,47 @@
-<p>cart-page works!</p>
+<div class="container" *ngIf="cartProducts.length > 0; else empty">
+  <h2 class="text-center mb">Ваш заказ:</h2>
+
+  <table>
+    <tbody>
+      <tr *ngFor="let cartProduct of cartProducts; let i = index">
+        <td>{{ cartProduct.type }}</td>
+        <td>{{ cartProduct.title }}</td>
+        <td>{{ cartProduct.price }} $</td>
+        <td>
+          <button class="btn btn-danger">Удалить товар</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <b class="right">Итоговая цена: {{ totalPrice }} $</b>
+</div>
+
+
+<ng-template #empty>
+  <h2 class="text-center">Пусто 🥱...</h2>
+</ng-template>
+
+<!-- <div class="container" *ngIf="cartProducts.length > 0; else empty">
+  <h2 class="text-center">Your order:</h2>
+
+  <table>
+      <tbody>
+          <tr *ngFor="let cartProduct of cartProducts; let i = index">
+              <td>{{ cartProduct.type }}</td>
+              <td>{{ cartProduct.title }}</td>
+              <td>
+                  <button class="btn btn-danger">Delete</button>
+              </td>
+              <td>{{ cartProduct.price }} $</td>
+          </tr>
+      </tbody>
+  </table>
+  <hr>
+  <b class="right">Total: {{totalPrice}} $</b>
+</div>
+
+<ng-template #empty>
+  <h2 class="text-center">Cart is empty, select product</h2>
+</ng-template> -->
+

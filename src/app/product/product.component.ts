@@ -1,3 +1,4 @@
+import { ProductService } from './../shared/product.service';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ProductComponent implements OnInit {
   @Input() product;
 
-  constructor() {}
+  constructor(
+    private productServ: ProductService
+  ) {}
 
   ngOnInit(): void {}
+
+  addProduct(product) {
+    this.productServ.addProduct(product)
+  }
 }
