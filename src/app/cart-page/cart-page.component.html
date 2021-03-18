@@ -8,13 +8,65 @@
         <td>{{ cartProduct.title }}</td>
         <td>{{ cartProduct.price }} $</td>
         <td>
-          <button class="btn btn-danger">Удалить товар</button>
+          <button class="btn btn-danger" (click)="delete(cartProduct)">Удалить товар</button>
         </td>
       </tr>
     </tbody>
   </table>
   <hr>
   <b class="right">Итоговая цена: {{ totalPrice }} $</b>
+
+  <h2 class="text-center mb">Доставка: </h2>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <div class="form-control">
+      <label for="name">Введите ваше имя</label>
+      <input id="name" type="name" formControlName="name" />
+      <div
+        *ngIf="form.get('name').touched && form.get('name').invalid"
+        class="validation">
+        <small *ngIf="form.get('name').errors.required">Введите ваше имя 🥱</small>
+      </div>
+    </div>
+
+    <div class="form-control">
+      <label for="phone">Номер телефона</label>
+      <input id="phone" type="phone" formControlName="phone" />
+      <div
+        *ngIf="form.get('phone').touched && form.get('phone').invalid"
+        class="validation">
+        <small *ngIf="form.get('phone').errors.required">Введите ваш номер телефона 🥱</small>
+      </div>
+    </div>
+
+    <div class="form-control">
+      <label for="address">Ваш адрес</label>
+      <input id="address" type="address" formControlName="address" />
+      <div
+        *ngIf="form.get('address').touched && form.get('address').invalid"
+        class="validation">
+        <small *ngIf="form.get('address').errors.required">Введите ваш адрес 🥱</small>
+      </div>
+    </div>
+  
+    <div class="form-control">
+      <label for="payment">Способ оплаты:</label>
+  
+      <select formControlName="payment">
+        <option value="Cash">Наличными</option>
+        <option value="Card">Картой</option>
+      </select>
+    </div>
+  
+    <button
+      type="submit"
+      class="btn btn-primary btn-block"
+      [disabled]="form.invalid || submitted">
+      Добавить
+    </button>
+  </form>
+  
 </div>
 
 
@@ -22,26 +74,4 @@
   <h2 class="text-center">Пусто 🥱...</h2>
 </ng-template>
 
-<!-- <div class="container" *ngIf="cartProducts.length > 0; else empty">
-  <h2 class="text-center">Your order:</h2>
-
-  <table>
-      <tbody>
-          <tr *ngFor="let cartProduct of cartProducts; let i = index">
-              <td>{{ cartProduct.type }}</td>
-              <td>{{ cartProduct.title }}</td>
-              <td>
-                  <button class="btn btn-danger">Delete</button>
-              </td>
-              <td>{{ cartProduct.price }} $</td>
-          </tr>
-      </tbody>
-  </table>
-  <hr>
-  <b class="right">Total: {{totalPrice}} $</b>
-</div>
-
-<ng-template #empty>
-  <h2 class="text-center">Cart is empty, select product</h2>
-</ng-template> -->
 
