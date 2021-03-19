@@ -1,6 +1,6 @@
 # Shop Date Deploy & final Work 18.03.2021 
 
-Ссылка на приложение с деплоем на Fire base [shop-ru-2021](https://shop-ru-2021.web.app/) 
+Ссылка на приложение с деплоем на Fire base [shop-ru-2021](https://shop-ru-2021.web.app/ target="_blank") 
 
 ## Development server
 
