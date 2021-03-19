@@ -1,6 +1,6 @@
 # Shop Date Deploy & final Work 18.03.2021 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
+Ссылка на приложение с деплоем на Fire base [shop-ru-2021](https://shop-ru-2021.web.app/) version 11.2.3.
 
 ## Development server
 
